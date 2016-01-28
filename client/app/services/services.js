@@ -5,7 +5,7 @@ import UserService from './userService';
 let serviceModule = angular
   .module('app.services', [])
   .constant('api', {
-    'url': 'http://http://m3.dev.api.idearobin.com//1.0/'
+    'url': 'http://m3.dev.api.idearobin.com/1.0/'
   })
   .service({ UserService, SitemapService });
 

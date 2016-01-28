@@ -1,0 +1,19 @@
+@import '../../../common/common';
+
+login {
+  background: $bgColor;
+  display: block;
+  height: 100%;
+  #login{
+    height: 100%;
+    form {
+      background: #ffffff;
+      border-radius: 3px;
+      margin: 5px;
+      width: 300px;
+      md-input-container + md-input-container {
+        margin-top: 0;
+      }
+    }
+  }
+}

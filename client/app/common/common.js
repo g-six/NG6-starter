@@ -1,12 +1,14 @@
 import angular from 'angular';
 import Navbar from './navbar/navbar';
-import Hero from './hero/hero';
+import Sidenav from './sidenav/sidenav';
+import Footer from './footer/footer';
 import User from './user/user';
 
 let commonModule = angular.module('app.common', [
   Navbar.name,
-  Hero.name,
-  User.name
+  Sidenav.name,
+  User.name,
+  Footer.name
 ]);
 
 export default commonModule;

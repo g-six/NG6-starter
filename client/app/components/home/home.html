@@ -1,9 +1,10 @@
-<navbar></navbar>
-<header>
-  <hero></hero>
-</header>
-<main>
-  <div>
-    <h1>Found in {{ vm.name }}.html</h1>
-  </div>
-</main>
+<section layout="row">
+  <sidenav></sidenav>
+  <md-content>
+    <navbar></navbar>
+    <main>
+      <h1 class="title">Found in {{ vm.UserService.data.email }}.html</h1>
+      <pre>{{ vm.UserService.data | json:2 }}</pre>
+    </main>
+  </md-content>
+</section>

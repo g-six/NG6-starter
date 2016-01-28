@@ -1,0 +1,30 @@
+<div id="login" layout="column" layout-align="center center">
+	<div flex></div>
+	
+	<div flex-xs="95" flex-sm="80" flex-md="75" flex-lg="70" flex-xl="50">
+		<form layout="column" class="md-whiteframe-1dp" ng-submit="vm.doLogin()">
+			<div class="md-warn">
+				<small ng-bind="vm.error"></small>
+			</div>
+			<md-input-container>
+				<label>E-mail</label>
+				<input type="email" ng-model="vm.user.email" layout-align="end end" />
+				<div ng-messages>
+					<small ng-bind="vm.errors.email"></small>
+				</div>
+			</md-input-container>
+
+			<md-input-container>
+				<label>Password</label>
+				<input type="password" ng-model="vm.user.password" />
+				<div ng-messages>
+					<small ng-bind="vm.errors.password">Error</small>
+				</div>
+			</md-input-container>
+
+			<md-button type="submit" class="md-block md-raised md-primary">Login</md-button>
+		</form>
+	</div>
+	
+	<div flex></div>
+</div>

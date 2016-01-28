@@ -1,0 +1,13 @@
+<md-sidenav class="md-sidenav-left md-whiteframe-z2" md-component-id="left" md-is-locked-open="$mdMedia('gt-md')">
+	<md-toolbar>
+	  <h1 class="md-toolbar-tools">Sidenav Left</h1>
+	</md-toolbar>
+
+	<md-content role="navigation">
+		<ul class="app-menu">
+			<li layout="column" ng-repeat="page in vm.SitemapService.data.pages">
+				<md-button ng-class="{'active': vm.isSelected()}" ui-sref="{{ page.name }}" flex> {{ page.title }}</md-button>
+			</li>
+		</ul>
+	</md-content>
+</md-sidenav>

@@ -10,14 +10,21 @@ class NavbarController {
   loadUserInfo() {
     this.UserService.me().then((response) => {
       if ( typeof response.error !== 'undefined' ) {
-          localStorage.clear();
-          this.state.go('login');
-        }
-        else
-        {
-          this.name = this.UserService.data.email;
-        }
+        localStorage.clear();
+        this.state.go('login');
+      }
+      else
+      {
+        this.name = this.UserService.data.email;
+      }
     }.bind(this));
+  }
+
+  logout() {
+    this.UserService.logout().then((response) => {
+      localStorage.clear();
+      this.state.go('login');
+    });
   }
 }
 

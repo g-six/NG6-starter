@@ -22,7 +22,11 @@ body {
     }
   }
 
-  main {
+  .left-container {
+    overflow-y: hidden;
+  }
+  div.main {
+    display: block;
     padding: 16px;
     .title {
       margin: 0 0 16px;

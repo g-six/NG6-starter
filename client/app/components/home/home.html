@@ -1,10 +1,10 @@
 <section layout="row">
   <sidenav></sidenav>
-  <md-content>
+  <md-content class="left-container" layout="column">
     <navbar></navbar>
-    <main>
+    <div class="main" flex>
       <h1 class="title">Found in {{ vm.UserService.data.email }}.html</h1>
-      <pre>{{ vm.UserService.data | json:2 }}</pre>
-    </main>
+      <pre>{{ vm.UserService | json:2 }}</pre>
+    </div>
   </md-content>
 </section>

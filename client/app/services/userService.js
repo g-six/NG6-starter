@@ -18,8 +18,22 @@ export default class UserService {
     })
   }
 
+  logout() {
+    return this.http.get(`${this.url}logout`, {
+      headers: {
+        'Authorization': `Bearer ${localStorage.getItem('token')}`
+      }
+    }).then((response) => {
+      this.data = {};
+      this.information = {};
+      return { data: response.data.data, status: response.status };
+    }).catch((e) => {
+      return { error: e.data, status: e.status };
+    })
+  }
+
   me() {
-    return this.http.get(`${this.url}users/profile`, {
+    return this.http.get(`${this.url}users/me?include=information`, {
       headers: {
         'Authorization': `Bearer ${localStorage.getItem('token')}`
       }

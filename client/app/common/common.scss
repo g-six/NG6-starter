@@ -27,6 +27,7 @@ body {
   }
   div.main {
     display: block;
+    overflow-y: auto;
     padding: 16px;
     .title {
       margin: 0 0 16px;
